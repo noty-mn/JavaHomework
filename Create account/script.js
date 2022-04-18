@@ -7,7 +7,6 @@ var Storage = [
         email: 'bayasaa0424@yahoo.com',
         age: '20',
         id:'01242453'
-
     },
 ]
 function registerUser(){
@@ -82,6 +81,7 @@ function registerUser(){
             window.location.href='../Login/index.html'
             Storage.push(newUser)
             console.log(Storage)
+            localStorage.users = JSON.stringify(Storage)
             break
         }
     }
@@ -91,8 +91,8 @@ function login(){
     var user = document.getElementById('user').value
     var password = document.getElementById('password').value
 
-    for(var i = 0; i < Storage.length; i++) {
-        if(user == Storage[i].user && password == Storage[i].password) {
+    for(var i = 0; i < JSON.parse(localStorage.users).length; i++) {
+        if(user == JSON.parse(localStorage.users)[i].user && password == JSON.parse(localStorage.users)[i].password) {
             console.log(user + ' is logged in')
             window.location.href='./post.html'
             break
@@ -120,12 +120,3 @@ function login(){
 //     document.body.appendChild(form);
 //     form.submit();
 // }
-
-var button = document.getElementById('submit');
-var post = document.getElementById('post');
-var targetfield = document.getElementById('targetfield');
-
-button.addEventListener('click', function(){
-    var post_text = post.value;
-    targetfield.innerHTML = post_text;
-})

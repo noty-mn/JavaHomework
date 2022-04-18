@@ -25,6 +25,7 @@ html{
     background-color: #DBE7E4;
     margin-top: 15vh;
     border-radius: 10px;
+    box-shadow: 8px 8px #ffffff50;
 }
 .login{
     display: flex;
@@ -43,6 +44,7 @@ html{
     border: none;
     margin-top: 10px;
     margin-left: 6%;
+    cursor: pointer;
 }
 .input{
     width: 300px;
