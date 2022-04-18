@@ -18,7 +18,7 @@ html{
 .post{
     width: 25%;
     height: 100vh;
-    background-color: #fde2e4;
+    background-color: #FDE2E4;
 }
 .btn{
     background-color: #99C1DE;
@@ -46,7 +46,7 @@ html{
 .view{
     width: 25%;
     height: 20vh;
-    background-color: #fff;
+    background-color: #ffffff;
     text-align: center;
     margin-left: 25%;
     margin-top: 15px;
