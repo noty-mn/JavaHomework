@@ -52,18 +52,32 @@ html{
     margin-top: 15px;
     border-radius: 15px;
 }
-#targetfield{
-    width: 100%;
-    height: 5vh;
+#targetfield, #new-post{
+    min-width: 100px;
     background-color: #ffffff;
     text-align: center;
     margin-left: 15px;
     margin-top: 15px;
     border-radius: 15px;
-    padding: 15px 5px 15px 5px;
+    padding: 8px 15px ;
     overflow: auto;
 }
 .user{
     color: #333;
     padding: 15px;
+}
+.henbe, #whoPosted{
+    color: #99c1de;
+    text-align: left;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #33333350;
+}
+#logout{
+    margin-top: 80vh;
+}
+#trash{
+    margin-left: 50px;
+}
+.postId{
+    display: none;
 }

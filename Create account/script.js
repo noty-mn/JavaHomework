@@ -16,7 +16,6 @@ function registerUser(){
     var newpassword = document.getElementById('newpassword').value
     var newemail = document.getElementById('newemail').value
     var newage = document.getElementById('newage').value
-    var newid
 
     var newUser = {
         username: newname,
@@ -25,7 +24,7 @@ function registerUser(){
         password: newpassword,
         email: newemail,
         age: newage,
-        id: newid
+        id: Date.now()
     }
 
     for(var i = 0; i < Storage.length; i++) {
@@ -78,7 +77,7 @@ function registerUser(){
             break
         }   else {
             alert('success')
-            window.location.href='../Login/index.html'
+            //window.location.href='../Login/index.html'
             Storage.push(newUser)
             console.log(Storage)
             localStorage.users = JSON.stringify(Storage)
@@ -87,14 +86,22 @@ function registerUser(){
     }
 }
 
+let whoLoggedIn;
+
 function login(){
     var user = document.getElementById('user').value
     var password = document.getElementById('password').value
+    //var currentUser = document.querySelector('.curuser');
 
     for(var i = 0; i < JSON.parse(localStorage.users).length; i++) {
         if(user == JSON.parse(localStorage.users)[i].user && password == JSON.parse(localStorage.users)[i].password) {
             console.log(user + ' is logged in')
             window.location.href='./post.html'
+            whoLoggedIn = JSON.parse(localStorage.users)[i]
+            
+            localStorage.whoLoggedIn = JSON.stringify(whoLoggedIn)
+            //currentUser.innerText = JSON.parse(localStorage.whoLoggedIn).user
+            console.log(whoLoggedIn)
             break
         }   else {
             console.log('no')
