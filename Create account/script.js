@@ -77,7 +77,7 @@ function registerUser(){
             break
         }   else {
             alert('success')
-            //window.location.href='../Login/index.html'
+            window.location.href='../Login/index.html'
             Storage.push(newUser)
             console.log(Storage)
             localStorage.users = JSON.stringify(Storage)

@@ -93,7 +93,7 @@ function postSync() {
 
             let postId = document.createElement('input');
             postId.className = "postId";
-            // postId.value = JSON.parse(el.id);
+            postId.value = JSON.parse(el.id);
             postId.value = el.id;
 
             newPost.appendChild(postId);
