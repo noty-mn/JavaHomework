@@ -15,15 +15,16 @@
                 <div class="login-img">
                     <p>Create account</p>
                 </div>
-                <input type="text" class="input" placeholder="Нэр">
-                <input type="text" class="input" placeholder="Овог">
-                <input type="password" class="input" placeholder="Password">
-                <input type="password" class="input" placeholder="retype Password">
-                <input type="email" class="input" placeholder="email">
-                <input type="number" class="input" placeholder="age">
-                <button type="submit" class="btn">Create account</button>
+                <input type="text" class="input" placeholder="Нэр" id="newname">
+                <input type="text" class="input" placeholder="Овог" id="newsurname">
+                <input type="text" class="input" placeholder="UserName" id="newuser" required>
+                <input type="password" class="input" placeholder="Password" id="newpassword" required>
+                <input type="email" class="input" placeholder="email" id="newemail">
+                <input type="text" class="input" placeholder="age" id="newage">
+                <button type="submit" class="btn" onclick="registerUser()">Create account</button>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
